@@ -1,0 +1,24 @@
+{
+  "name": "widget",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "next",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@testing-library/jest-dom": "^5.11.1",
+    "@testing-library/react": "^10.4.6",
+    "babel-jest": "^26.1.0",
+    "jest": "^26.1.0"
+  }
+}
