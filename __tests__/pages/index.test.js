@@ -41,15 +41,14 @@ describe("Index testing", () => {
   });
 
   describe("Dialog Testing", () => {
-    test("Should popup dialog after clicking 'share' button on image card", () => {
+    test("Should popup dialog after clicking 'share' button on image card", async () => {
       render(<Index images={images} />);
 
       // open dialog
       fireEvent.click(screen.getAllByTestId("share-btn")[0]);
-
-      const expectedUrl = "https://example.com/images/image1";
-
-      expect(screen.getByTestId("embed-url").value).toBe(expectedUrl);
+      await waitFor(() =>
+        expect(screen.getByRole("presentation")).toBeInTheDocument()
+      );
     });
 
     test("Dialog no longer display in DOM", async () => {
